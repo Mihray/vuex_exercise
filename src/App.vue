@@ -1,6 +1,6 @@
 <template>
   <HelloWorld/>
-  <div class="box" @click="BoxClick">
+  <div class="box" @click="BoxClick">box
   </div>
 </template>
 
@@ -22,10 +22,9 @@ export default {
   },
   methods:{
     BoxClick(){
+      this.$store.commit('incount')
+      console.log(this.$store.state.con)
       console.log('hello')
-      this.$store.commit('increment')
-      console.log(this.$store.state.count)
-      console.log('hello2')
     }
   }
 }

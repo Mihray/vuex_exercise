@@ -17,6 +17,12 @@ const store=createStore({
         },
         pushNewDay(state, day) {
             state.dayList.push(day)
+        },
+        incount(state){
+            state.con++
+        },
+        product(state){
+            state.con=state.con*2
         }
     }
 })
