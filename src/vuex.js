@@ -6,9 +6,29 @@ const store=createStore({
         return {
             con:68,
             dayList:[],
-            length:45,
+            length:5,
             userName: '小小美',
+            lists:[
+                {id:1,name:'mihray'},
+                {id:2,name:'daMing'},
+                {id:3,name:'daMing'},
+                {id:4,name:'daMing'}
+            ]
         }
+    },
+
+    getters:{
+        showList(state){
+            // const a=5
+            const obj={id:state.length,name:'hehiehi'+state.length}
+             state.lists.push(obj)
+             state.length++
+             return state.lists
+            //  state.length++
+        },
+        // lengthCount(state){
+        //     state.length++
+        // }
     },
 
     mutations:{
